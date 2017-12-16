@@ -595,7 +595,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(WLMainFrameController);
     NSString* fabricAPIKeyTrimmed = [fabricAPIKey stringByTrimmingCharactersInSet:whitespaceToTrim];
     
     //[Fabric with:@[[Crashlytics class]]];
-    [Crashlytics startWithAPIKey:fabricAPIKeyTrimmed];
+//    [Crashlytics startWithAPIKey:fabricAPIKeyTrimmed];
     
     [[NSUserNotificationCenter defaultUserNotificationCenter] removeAllDeliveredNotifications];
 }
