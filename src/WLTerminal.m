@@ -299,7 +299,8 @@ inline static BOOL hasAnyString(NSString *row, NSArray *array) {
 //
 // added by K.O.ed
 // WARNING: bunch of hard code
-// 
+//
+// willard 根據拿到的文字 更新 bbs 狀態
 - (void)updateBBSState {
     NSString *topLine = [self stringAtRow:0];	// get the first line from the screen
     NSString *secondLine = [self stringAtRow:1];
@@ -307,6 +308,8 @@ inline static BOOL hasAnyString(NSString *row, NSArray *array) {
     NSString *bottomLine = [self stringAtRow:_maxRow-1];
 	NSString *wholePage = [self stringAtIndex:0 length:_maxRow * _maxColumn];
 	_bbsState.subState = BBSSubStateNone;
+    NSLog(@"willard %@", wholePage);
+    // willard 讀到的文字
     if (NO) {
         // just for align
     } else if (hasAnyString(bottomLine, [NSArray arrayWithObjects:@"【  】", @"【信】", @"編輯文章", nil])) {

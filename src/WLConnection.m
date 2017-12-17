@@ -484,6 +484,7 @@
 
 - (void)sendText:(NSString *)text 
 	   withDelay:(int)microsecond {
+    // willard 發送文字
     NSAutoreleasePool *pool = [NSAutoreleasePool new];
 
     // replace all '\n' with '\r' 
@@ -517,6 +518,7 @@
         }
     }
 
+    // willard 如果沒 delay，就一次發送；反之，就慢慢送。
     // Now send the message
     if (microsecond == 0) {
         // send immediately
@@ -534,6 +536,7 @@
 }
 
 - (void)login {
+    // willard 登入
     NSString *addr = [_site address];
     const char *account = [addr UTF8String];
     const int sleepTime = 100000, maxAttempt = 700;
